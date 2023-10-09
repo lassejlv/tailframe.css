@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "watch": "node src/watch.mjs",
-    "tailwindcss": "tailwindcss -i ./src/dist/ui.css -o ./src/dist/build.css"
+    "tailwindcss": "tailwindcss -i ./src/dist/ui.css -o ./src/dist/build.css -m"
   },
   "keywords": [],
   "author": "",
