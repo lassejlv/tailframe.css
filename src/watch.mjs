@@ -1,9 +1,9 @@
 import chokidar from "chokidar";
 import { spawn } from "child_process";
-import { log } from "../src/logger.js";
+import { log } from "../src/logger.mjs";
 
 // Command to run when HTML files change
-const commandToRun = "node --no-warnings src/build.js";
+const commandToRun = "node --no-warnings src/build.mjs";
 
 // Directory to monitor for HTML file changes
 const directoryToWatch = "./src/ui";

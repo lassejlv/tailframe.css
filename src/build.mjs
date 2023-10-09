@@ -1,7 +1,13 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { exec } from "node:child_process";
+import performancePackage from "performance-now";
+import { log } from "./logger.mjs";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// Start timer
+const start = performancePackage();
 
 // Directories to search for CSS files
 const directoriesToSearch = ["ui", path.join("ui", "components")];
@@ -33,4 +39,21 @@ if (!fs.existsSync(dirToPutIn)) {
 }
 fs.writeFileSync(path.join(__dirname, "dist/ui.css"), content);
 
-console.log("Build successful");
+// End timer
+const end = performancePackage();
+
+log("success", `Built in ${((end - start) / 1000).toFixed(3)}ms. 🎉`);
+
+// Run tailwindcss
+log("info", "Running tailwindcss...");
+exec("npm run tailwindcss", (error, stdout, stderr) => {
+  if (error) {
+    log("error", `Error: ${error.message}`);
+    return;
+  }
+  if (stderr) {
+    log("error", `Error: ${stderr}`);
+    return;
+  }
+  log("success", "tailwindcss ran successfully. 🎉");
+});
