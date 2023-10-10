@@ -1,0 +1,14 @@
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+  @apply outline-none border border-gray-200 rounded-md px-3 py-3 text-sm focus:ring-2 focus:ring-gray-300 transition-all duration-200 ease-in-out;
+}
+
+input[full] {
+  @apply w-full;
+}
+
+input[md] {
+  @apply w-1/2;
+}
