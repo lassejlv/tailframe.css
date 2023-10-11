@@ -1,3 +1,4 @@
+/* for text,password,email,number */
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -5,10 +6,51 @@ input[type="number"] {
   @apply outline-none border border-gray-200 rounded-md px-3 py-3 text-sm focus:ring-2 focus:ring-gray-300 transition-all duration-200 ease-in-out;
 }
 
-input[full] {
+/* Full size */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"][full] {
   @apply w-full;
 }
 
-input[md] {
+/* Medium Size */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"][md] {
   @apply w-1/2;
+}
+
+/* Invalid */
+input[invalid="true"] {
+  @apply border-red-500 focus:ring-red-200;
+  background-image: var(--form-invalid);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 25px;
+  animation: sideToSideInverse 0.3s ease-in-out;
+}
+
+/* Valid */
+input[invalid="false"] {
+  @apply border-green-500 focus:ring-green-200;
+  background-image: var(--form-valid);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 25px;
+  animation: sideToSideInverse 0.3s ease-in-out;
+}
+
+@keyframes sideToSideInverse {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(1%);
+  }
+
+  100% {
+    transform: translateX(-1%);
+  }
 }

@@ -15,8 +15,28 @@
         height: 100vh;
       "
     >
-      <input type="password" class="input" placeholder="Enter your name" md />
-      <button hasRing style="margin-left: 5px">Submit Form</button>
+      <input
+        type="password"
+        class="input"
+        placeholder="Enter your name"
+        md
+        id="field"
+      />
+      <button hasRing style="margin-left: 5px" id="button">Submit Form</button>
+
+      <script>
+        const button = document.getElementById("button");
+        const field = document.getElementById("field");
+        button.onclick = () => {
+          console.log(field.value);
+          // set form to invalid
+          if (field.value > 5) {
+            field.setAttribute("invalid", "false");
+          } else {
+            field.setAttribute("invalid", "true");
+          }
+        };
+      </script>
     </div>
   </body>
 </html>
