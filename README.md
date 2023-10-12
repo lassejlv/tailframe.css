@@ -1,3 +1,3 @@
 ## Tailframe CSS
 
-A < 2KB CSS framework for building simple websites. Build on Tailwind CSS.
+A < 10KB CSS library, elegantly built on Tailwind CSS.
