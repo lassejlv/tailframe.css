@@ -60,6 +60,14 @@ export const config = {
       isDisabled: false,
     },
     {
+      name: "Loader",
+      placement: "middle",
+      href: "/docs/loader",
+      href_data_name: "loader",
+      icon: "fas fa-spinner",
+      isDisabled: false,
+    },
+    {
       name: "Alerts",
       placement: "middle",
       href: "/docs/alerts",
