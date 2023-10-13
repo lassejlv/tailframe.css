@@ -4,55 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../dist/build.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <title>Document</title>
-    <style>
-      body {
-        background-color: #eaeaea;
-      }
-    </style>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar">
-      <a>Logo</a>
+      <h1 class="text-2xl">Tailframe CSS</h1>
 
       <ul class="list">
-        <li class="item"><a href="#">Sass</a></li>
-        <li class="item"><a href="#">Components</a></li>
-        <li class="item"><a href="#">JavaScript</a></li>
+        <li class="item">
+          <button md bold>Documention</button>
+        </li>
+        <li
+          class="item"
+          onclick="window.location.replace('https://github.com/lassejlv/tailframe.css')"
+        >
+          <button md bold elegant hasring>
+            <i class="fab fa-github mr-2"></i>View on github
+          </button>
+        </li>
       </ul>
     </nav>
 
+    <!-- Hero -->
     <div
-      style="
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-      "
+      class="container mx-auto flex flex-col items-center justify-center h-[45vh]"
     >
-      <input
-        type="text"
-        class="input"
-        placeholder="Enter your name"
-        full
-        id="field"
-      />
-      <button hasRing style="margin-left: 5px" id="button" elegant>
-        Submit Form
-      </button>
+      <h1 class="text-5xl font-bold mb-2 text-center">
+        Make it clean and simple.
+      </h1>
+      <p class="text-gray-500 text-xl text-center">
+        Tailframe is a mordern css libary that comes with beautiful components
+        out of the box. <br />
+        <b>Build on top of Tailwind CSS ❤️</b>
+      </p>
 
-      <script>
-        const button = document.getElementById("button");
-        const field = document.getElementById("field");
-        button.onclick = () => {
-          if (!field.value) {
-            field.setAttribute("invalid", true);
-          } else {
-            field.removeAttribute("invalid");
-            field.setAttribute("invalid", false);
-          }
-        };
-      </script>
+      <div class="mt-5 space-x-2">
+        <button md bold lg>
+          <i class="fa-solid fa-angle-right"></i> Get started
+        </button>
+        <button md bold lg elegant>
+          <i class="fab fa-github mr-2"></i>Give a star
+        </button>
+      </div>
     </div>
   </body>
 </html>

@@ -24,6 +24,11 @@ button[elegant] {
   @apply bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-200;
 }
 
+/* utils, like bold etc */
+button[bold] {
+  @apply font-bold;
+}
+
 [disabled] {
   @apply opacity-50 cursor-not-allowed;
 }
@@ -95,7 +100,7 @@ input[invalid="false"] {
 }
 
 .navbar {
-  @apply flex items-center justify-between px-4  py-3 bg-white border-b border-gray-200;
+  @apply flex items-center justify-between px-4 py-3 bg-white border-b border-gray-200;
 }
 
 .navbar .list {
@@ -103,7 +108,7 @@ input[invalid="false"] {
 }
 
 .navbar .list .item {
-  @apply px-4 py-2 text-gray-600 hover:text-gray-700 transition-colors duration-150 ease-in-out;
+  @apply px-1 py-2 text-gray-600 hover:text-gray-700 transition-colors duration-150 ease-in-out;
 }
 
 :root {
