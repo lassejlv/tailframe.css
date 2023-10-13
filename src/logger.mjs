@@ -2,8 +2,8 @@ import chalk from "chalk";
 
 /**
  *
- * @param {String} type
- * @param {String} message
+ * @param {String} type - The type of log to print
+ * @param {String} message - The message to print
  * @returns {void}
  */
 
