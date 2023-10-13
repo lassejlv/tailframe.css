@@ -38,6 +38,8 @@ export default function Sidebar(props) {
 
             {config.docs
               .filter((doc) => doc.placement === "middle")
+              // sort by a-z
+              .sort((a, b) => (a.name > b.name ? 1 : -1))
               .map((doc) => (
                 <Link to={`/docs/${doc.href_data_name}`} key={doc.name}>
                   <button md="true" bold="true" outline="true">
