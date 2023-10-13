@@ -17,23 +17,36 @@ export default function Sidebar(props) {
           <h1 className="text-lg font-medium">Tailframe CSS</h1>
         </div>
         <nav className="space-y-2">
-          <Link to="/docs">
-            <button md="true" bold="true" outline="true" className="mb-2">
-              <i className="fas fa-book mr-2"></i>
-              <span className="text-sm font-medium">Getting Started</span>
-            </button>
-          </Link>
+          <div className="flex flex-col space-y-2 mb-5">
+            <h1 className="text-sm font-medium mt-5 mb-5">General</h1>
 
-          {config.docs
-            .filter((doc) => doc.placement === "top")
-            .map((doc) => (
-              <Link to={`/docs/${doc.href_data_name}`} key={doc.name}>
-                <button md="true" bold="true" outline="true">
-                  <i className={`${doc.icon} mr-2`}></i>
-                  <span className="text-sm font-medium">{doc.name}</span>
-                </button>
-              </Link>
-            ))}
+            {config.docs
+              .filter((doc) => doc.placement === "top")
+              .map((doc) => (
+                <Link to={`/docs/${doc.href_data_name}`} key={doc.name}>
+                  <button md="true" bold="true" outline="true">
+                    <i className={`${doc.icon} mr-2`}></i>
+                    <span className="text-sm font-medium">{doc.name}</span>
+                  </button>
+                </Link>
+              ))}
+          </div>
+
+          <hr className="my-4" />
+          <div className="flex flex-col space-y-2">
+            <h1 className="text-sm font-medium mt-5 mb-5">Components</h1>
+
+            {config.docs
+              .filter((doc) => doc.placement === "middle")
+              .map((doc) => (
+                <Link to={`/docs/${doc.href_data_name}`} key={doc.name}>
+                  <button md="true" bold="true" outline="true">
+                    <i className={`${doc.icon} mr-2`}></i>
+                    <span className="text-sm font-medium">{doc.name}</span>
+                  </button>
+                </Link>
+              ))}
+          </div>
         </nav>
       </aside>
       <main className="flex-grow p-6">
