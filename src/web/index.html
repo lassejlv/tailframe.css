@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head scroll-smooth>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../dist/build.css" />
     <title>Document</title>
+    <style>
+      body {
+        background-color: #eaeaea;
+      }
+    </style>
   </head>
   <body>
+    <nav class="navbar">
+      <a>Logo</a>
+
+      <ul class="list">
+        <li class="item"><a href="#">Sass</a></li>
+        <li class="item"><a href="#">Components</a></li>
+        <li class="item"><a href="#">JavaScript</a></li>
+      </ul>
+    </nav>
+
     <div
       style="
         display: flex;
@@ -16,24 +31,25 @@
       "
     >
       <input
-        type="password"
+        type="text"
         class="input"
         placeholder="Enter your name"
-        md
+        full
         id="field"
       />
-      <button hasRing style="margin-left: 5px" id="button">Submit Form</button>
+      <button hasRing style="margin-left: 5px" id="button" elegant>
+        Submit Form
+      </button>
 
       <script>
         const button = document.getElementById("button");
         const field = document.getElementById("field");
         button.onclick = () => {
-          console.log(field.value);
-          // set form to invalid
-          if (field.value > 5) {
-            field.setAttribute("invalid", "false");
+          if (!field.value) {
+            field.setAttribute("invalid", true);
           } else {
-            field.setAttribute("invalid", "true");
+            field.removeAttribute("invalid");
+            field.setAttribute("invalid", false);
           }
         };
       </script>
