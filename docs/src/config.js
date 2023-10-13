@@ -28,6 +28,14 @@ export const config = {
       isDisabled: false,
     },
     {
+      name: "Switch",
+      placement: "middle",
+      href: "/docs/switch",
+      href_data_name: "switch",
+      icon: "fas fa-toggle-on",
+      isDisabled: false,
+    },
+    {
       name: "Input",
       placement: "middle",
       href: "/docs/inputs",

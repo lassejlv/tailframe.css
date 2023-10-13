@@ -1,0 +1,35 @@
+details summary {
+  @apply p-2 bg-gray-100 overflow-hidden rounded-md text-sm hover:bg-gray-200 transition-colors duration-200 ease-in-out focus:ring-gray-300 max-w-[fit-content] cursor-pointer list-none;
+  list-style-type: none;
+}
+
+details[open] > summary {
+  @apply list-none;
+}
+
+details > ul {
+  @apply p-2 shadow z-[1] rounded-md w-52 space-y-2  bg-white absolute;
+}
+
+/* List item */
+details > ul > li {
+  @apply p-2 rounded-md text-sm hover:bg-gray-100 cursor-pointer transition-colors duration-200 ease-in-out focus:ring-gray-300;
+}
+
+/* Disabled */
+details > ul > li[disabled] {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+details > ul > li[disabled]:hover {
+  @apply bg-white;
+}
+
+/* Sizes */
+details > [sm] {
+  @apply px-2 py-1;
+}
+
+details > [lg] {
+  @apply px-4 py-2;
+}

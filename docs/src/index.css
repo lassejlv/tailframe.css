@@ -6,6 +6,75 @@ html[scroll-smooth] {
   scroll-behavior: smooth;
 }
 
+/* Default Variant */
+.alert {
+  @apply bg-blue-200 text-blue-400 p-3 rounded-md bg-opacity-10 mt-5 mb-2 max-w-2xl;
+}
+
+.alert p,
+.alert ul,
+.alert b,
+.alert h1,
+.alert h2,
+.alert h3,
+.alert h4,
+.alert h5,
+.alert h6 {
+  @apply text-blue-400 text-sm text-center md:text-left;
+}
+
+/* Other */
+/* success  */
+.alert[success] {
+  @apply bg-green-200;
+}
+
+.alert[success] p,
+.alert[success] ul,
+.alert[success] b,
+.alert[success] h1,
+.alert[success] h2,
+.alert[success] h3,
+.alert[success] h4,
+.alert[success] h5,
+.alert[success] h6 {
+  @apply text-gray-600;
+}
+
+/* warning */
+.alert[warning] {
+  @apply bg-yellow-200;
+}
+
+.alert[warning] p,
+.alert[warning] ul,
+.alert[warning] b,
+.alert[warning] h1,
+.alert[warning] h2,
+.alert[warning] h3,
+.alert[warning] h4,
+.alert[warning] h5,
+.alert[warning] h6 {
+  @apply text-yellow-700;
+}
+
+/* danger */
+.alert[danger] {
+  @apply bg-red-200;
+}
+
+.alert[danger] p,
+.alert[danger] ul,
+.alert[danger] b,
+.alert[danger] h1,
+.alert[danger] h2,
+.alert[danger] h3,
+.alert[danger] h4,
+.alert[danger] h5,
+.alert[danger] h6 {
+  @apply text-red-700;
+}
+
 button {
   @apply bg-gray-100 px-3 py-3 rounded-md text-sm hover:bg-gray-200 transition-colors duration-200 ease-in-out focus:ring-gray-300;
 }
@@ -40,6 +109,42 @@ button[sm] {
 
 button[lg] {
   @apply px-4 py-4 text-lg;
+}
+
+details summary {
+  @apply p-2 bg-gray-100 overflow-hidden rounded-md text-sm hover:bg-gray-200 transition-colors duration-200 ease-in-out focus:ring-gray-300 max-w-[fit-content] cursor-pointer list-none;
+  list-style-type: none;
+}
+
+details[open] > summary {
+  @apply list-none;
+}
+
+details > ul {
+  @apply p-2 shadow z-[1] rounded-md w-52 space-y-2  bg-white absolute;
+}
+
+/* List item */
+details > ul > li {
+  @apply p-2 rounded-md text-sm hover:bg-gray-100 cursor-pointer transition-colors duration-200 ease-in-out focus:ring-gray-300;
+}
+
+/* Disabled */
+details > ul > li[disabled] {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+details > ul > li[disabled]:hover {
+  @apply bg-white;
+}
+
+/* Sizes */
+details > [sm] {
+  @apply px-2 py-1;
+}
+
+details > [lg] {
+  @apply px-4 py-2;
 }
 
 /* for text,password,email,number */
@@ -99,15 +204,15 @@ input[invalid="false"] {
   }
 }
 
-.navbar {
+nav[navbar] {
   @apply flex items-center justify-between px-4 py-3 bg-white border-b border-gray-200;
 }
 
-.navbar .list {
+nav[navbar] .list {
   @apply flex;
 }
 
-.navbar .list .item {
+nav[navbar] .list .item {
   @apply px-1 py-2 text-gray-600 hover:text-gray-700 transition-colors duration-150 ease-in-out;
 }
 
@@ -116,6 +221,7 @@ input[invalid="false"] {
   --form-invalid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(239, 68, 68)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");
   --form-valid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(34, 197, 94)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
   --hamburger-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(107, 114, 128)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='3' y1='12' x2='21' y2='12'%3E%3C/line%3E%3Cline x1='3' y1='6' x2='21' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='18' x2='21' y2='18'%3E%3C/line%3E%3C/svg%3E");
+  --details-marker: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='rgb(107, 114, 128)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'%3E%3C/path%3E%3C/svg%3E");
   /* colors */
   --green-primary: rgb(34, 197, 94);
   --red-primary: rgb(239, 68, 68);
