@@ -27,6 +27,15 @@ export const config = {
       icon: "fas fa-mouse-pointer",
       isDisabled: false,
     },
+    
+    {
+      name: "Text Area",
+      placement: "middle",
+      href: "/docs/textarea",
+      href_data_name: "textarea",
+      icon: "fas fa-pensel",
+      isDisabled: false,
+    },
     {
       name: "Switch",
       placement: "middle",
