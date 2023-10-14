@@ -27,6 +27,22 @@ function App() {
             </button>
           </Link>
         </div>
+
+        {/* Producthunt logo */}
+        <div className="mt-5">
+          <a
+            href="https://www.producthunt.com/posts/tailframe-css?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-tailframe&#0045;css"
+            target="_blank"
+          >
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=419610&theme=neutral"
+              alt="Tailframe&#0032;CSS - A&#0032;&#0060;10KB&#0032;CSS&#0032;library&#0044;&#0032;elegantly&#0032;built&#0032;on&#0032;Tailwind&#0032;CSS&#0046; | Product Hunt"
+              style={{ width: "250px", height: "54px" }}
+              width="250"
+              height="54"
+            />
+          </a>
+        </div>
       </div>
     </>
   );

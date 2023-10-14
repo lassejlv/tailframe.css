@@ -18,6 +18,16 @@ export const config = {
       icon: "fas fa-hdd",
       isDisabled: false,
     },
+
+    {
+      name: "Version History",
+      placement: "top",
+      href: "/docs/versions",
+      href_data_name: "versions",
+      icon: "fas fa-code-branch",
+      isDisabled: false,
+    },
+
     // Components
     {
       name: "Buttons",
@@ -27,7 +37,7 @@ export const config = {
       icon: "fas fa-mouse-pointer",
       isDisabled: false,
     },
-    
+
     {
       name: "Text Area",
       placement: "middle",

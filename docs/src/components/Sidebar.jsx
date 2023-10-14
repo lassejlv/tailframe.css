@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Sidebar(props) {
   return (
     <div className="flex">
-      <aside className="sticky top-0 h-screen w-56 bg-gray-50 text-gray-800 p-4">
+      <aside className="sticky top-0 h-screen w-56 bg-gray-50 text-gray-800 p-4 hidden md:block">
         <div className="flex items-center mb-4 space-x-1">
           <img
             src="/logo.avif"
@@ -18,7 +18,9 @@ export default function Sidebar(props) {
         </div>
         <nav className="space-y-2">
           <div className="flex flex-col space-y-2 mb-5">
-            <h1 className="text-sm font-medium mt-5 mb-5">General</h1>
+            <h1 className="text-sm font-medium mt-5">General</h1>
+
+            <hr className="my-4" />
 
             {config.docs
               .filter((doc) => doc.placement === "top")

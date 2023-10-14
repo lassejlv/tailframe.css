@@ -13,11 +13,20 @@ export default function Navbar() {
         <li className="item">
           <details>
             <summary className="px-4 py-3" bold>
-              Select version
+              v0.0.1
             </summary>
             <ul>
               <li>
-                <a href="/docs">Latest (v0.0.1)</a>
+                <a href="/docs">
+                  {" "}
+                  <i className="fa-solid fa-angle-right"></i> Latest (v0.0.1)
+                </a>
+              </li>
+              <li>
+                <a href="/docs/versions">
+                  <i className="fa-solid fa-angle-right"></i>
+                  View all versions
+                </a>
               </li>
             </ul>
           </details>
