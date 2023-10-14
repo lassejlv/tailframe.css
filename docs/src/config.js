@@ -33,7 +33,7 @@ export const config = {
       placement: "middle",
       href: "/docs/textarea",
       href_data_name: "textarea",
-      icon: "fas fa-pensel",
+      icon: "fas fa-pencil",
       isDisabled: false,
     },
     {
