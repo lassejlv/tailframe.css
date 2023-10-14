@@ -40,8 +40,8 @@ export default function DocPage() {
           </>
         ) : (
           <>
-            <div class="bg-blue-200 text-blue-400 p-3 rounded-md bg-opacity-10 mt-5 mb-2">
-              <p class="text-blue-400 text-sm text-center md:text-left">
+            <div className="alert">
+              <p>
                 Heads up! Tailframe is still in development. Some components may
                 not work as expected.
               </p>
