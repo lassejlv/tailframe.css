@@ -24,7 +24,12 @@ export default function Sidebar(props) {
               .filter((doc) => doc.placement === "top")
               .map((doc) => (
                 <Link to={`/docs/${doc.href_data_name}`} key={doc.name}>
-                  <button md="true" bold="true" outline="true">
+                  <button
+                    md="true"
+                    bold="true"
+                    outline="true"
+                    className="w-full text-left"
+                  >
                     <i className={`${doc.icon} mr-2`}></i>
                     <span className="text-sm font-medium">{doc.name}</span>
                   </button>
@@ -42,7 +47,12 @@ export default function Sidebar(props) {
               .sort((a, b) => (a.name > b.name ? 1 : -1))
               .map((doc) => (
                 <Link to={`/docs/${doc.href_data_name}`} key={doc.name}>
-                  <button md="true" bold="true" outline="true">
+                  <button
+                    md="true"
+                    bold="true"
+                    outline="true"
+                    className="w-full text-left"
+                  >
                     <i className={`${doc.icon} mr-2`}></i>
                     <span className="text-sm font-medium">{doc.name}</span>
                   </button>
