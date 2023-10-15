@@ -1,3 +1,16 @@
+---
+title: "Navigation Bar"
+tagline: "How to use the navigation bar component in Tailframe CSS"
+lastUpdated: "2023-15-23"
+keywords:
+  [
+    "navigation bar",
+    "navbar",
+    "tailframe css navbar",
+    "tailframe css navigation bar",
+  ]
+---
+
 # Navigation Bar
 
 Tailframe provides a simple navigation bar component, wich can be customzied as you like. Example:

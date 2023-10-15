@@ -72,7 +72,7 @@ html[scroll-smooth] {
 .alert[danger] h4,
 .alert[danger] h5,
 .alert[danger] h6 {
-  @apply text-red-700;
+  @apply bg-red-700;
 }
 
 button {

@@ -1,3 +1,18 @@
+---
+title: "Installation"
+tagline: "How to install Tailframe CSS for your project"
+lastUpdated: "2023-15-23"
+keywords:
+  [
+    "tailframe",
+    "tailframe css",
+    "tailframe css installation",
+    "tailframe installation",
+    "tailframe css install",
+    "tailframe install",
+  ]
+---
+
 # Installation
 
 To install you will ned the following requirements:

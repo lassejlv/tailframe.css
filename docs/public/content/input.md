@@ -1,3 +1,18 @@
+---
+title: "Input Component"
+tagline: "How to use the input component in Tailframe CSS"
+lastUpdated: "2023-15-23"
+keywords:
+  [
+    "tailframe",
+    "tailframe css",
+    "tailframe css input",
+    "tailframe input",
+    "tailframe css input component",
+    "tailframe input component",
+  ]
+---
+
 # Input Component
 
 Like any other of our components, the input component also uses attributes to define its behavior. Example:

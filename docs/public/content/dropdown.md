@@ -1,3 +1,18 @@
+---
+title: "Dropdown Component"
+tagline: "How to use the dropdown component in Tailframe CSS"
+lastUpdated: "2023-15-23"
+keywords:
+  [
+    "tailframe",
+    "tailframe css",
+    "tailframe css dropdown",
+    "tailframe dropdown",
+    "tailframe css dropdowns",
+    "tailframe dropdowns",
+  ]
+---
+
 # Dropdown
 
 Dropdowns are also supported. You can use the `details` tag to create a dropdown. Example:

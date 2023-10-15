@@ -12,7 +12,8 @@ export default function DocPage() {
   React.useEffect(() => {
     fetch(`/content/${id}.md`).then(async (res) => {
       if (res.ok) {
-        setMarkdown(await res.text());
+        const text = await res.text();
+        setMarkdown(text.substring(text.indexOf("---", 3) + 3, text.length));
       } else {
         setPageDontExist(true);
       }
