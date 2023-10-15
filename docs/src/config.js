@@ -71,6 +71,14 @@ export const config = {
       isDisabled: false,
     },
     {
+      name: "Dialog (Modal)",
+      placement: "middle",
+      href: "/docs/dialog",
+      href_data_name: "dialog",
+      icon: "fas fa-window-restore",
+      isDisabled: false,
+    },
+    {
       name: "Dropdown",
       placement: "middle",
       href: "/docs/dropdown",

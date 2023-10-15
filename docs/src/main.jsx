@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import DocPage from "./docs/DocPage.jsx";
 import DocIndex from "./docs/index.jsx";
+import SearchPage from "./docs/SearchPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,17 @@ const router = createBrowserRouter([
     path: "/docs/:id",
     element: <DocPage />,
     errorElement: <div>404</div>,
+  },
+
+  {
+    path: "/docs/search",
+    element: <SearchPage />,
+    errorElement: <div>404</div>,
+  },
+
+  {
+    path: "*",
+    element: <div>404</div>,
   },
 ]);
 
