@@ -2,6 +2,7 @@
 title: "Libary Sizes"
 tagline: "The sizes you can use in Tailframe CSS components"
 lastUpdated: "2023-15-23"
+href: "libary-sizes"
 keywords:
   [
     "tailframe",

@@ -2,6 +2,7 @@
 title: "Dropdown Component"
 tagline: "How to use the dropdown component in Tailframe CSS"
 lastUpdated: "2023-15-23"
+href: "dropdown"
 keywords:
   [
     "tailframe",

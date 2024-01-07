@@ -2,6 +2,7 @@
 title: "Input Component"
 tagline: "How to use the input component in Tailframe CSS"
 lastUpdated: "2023-15-23"
+href: "input"
 keywords:
   [
     "tailframe",

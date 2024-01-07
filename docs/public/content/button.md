@@ -2,6 +2,7 @@
 title: "Button Component"
 tagline: "How to use the button component in Tailframe CSS"
 lastUpdated: "2023-15-23"
+href: "button"
 keywords:
   [
     "tailframe",

@@ -2,6 +2,7 @@
 title: "Installation"
 tagline: "How to install Tailframe CSS for your project"
 lastUpdated: "2023-15-23"
+href: "installation"
 keywords:
   [
     "tailframe",

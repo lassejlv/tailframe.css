@@ -63,6 +63,9 @@ export default function SearchPage() {
               const searchResultItem = {
                 title: title,
                 tagline: meta.tagline,
+
+                // Remove '"HREF"' the ""
+                href: meta.href.substring(1, meta.href.length - 1),
               };
 
               setSearchResults(() => [searchResultItem]);
@@ -83,7 +86,6 @@ export default function SearchPage() {
           placeholder="Search anything, dropdown, navbar..."
           onChange={(e) => {
             setSearch(e.target.value);
-
             handleSearch();
           }}
         />
@@ -95,6 +97,10 @@ export default function SearchPage() {
             {searchResults.map((result, index) => (
               <div
                 key={index}
+                onClick={() => {
+                  window.location.href = `/docs/${result.href}`;
+                }
+                }
                 className="bg-gray-100 hover:bg-gray-200 rounded-md p-2 transition-colors duration-200 ease-in-out cursor-pointer"
               >
                 <h2 className="text-lg font-bold">{result.title}</h2>

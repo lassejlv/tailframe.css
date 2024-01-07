@@ -2,8 +2,10 @@
 title: "Navigation Bar"
 tagline: "How to use the navigation bar component in Tailframe CSS"
 lastUpdated: "2023-15-23"
+href: "navigation-bar"
 keywords:
   [
+    "nav"
     "navigation bar",
     "navbar",
     "tailframe css navbar",
