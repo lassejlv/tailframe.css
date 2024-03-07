@@ -75,76 +75,16 @@ html[scroll-smooth] {
   @apply text-red-700;
 }
 
-button {
-  @apply bg-gray-100 px-3 py-3 rounded-md text-sm hover:bg-gray-200 transition-colors duration-200 ease-in-out focus:ring-gray-300;
+nav[navbar] {
+  @apply flex items-center justify-between px-4 py-3 bg-white border-b border-gray-200;
 }
 
-/* attribute */
-button[hasRing] {
-  @apply focus:ring-2 focus:border-none transition-all ease-in-out duration-200;
+nav[navbar] .list {
+  @apply flex;
 }
 
-/* varians */
-button[outline] {
-  @apply bg-transparent border-2 border-gray-200 text-gray-900 hover:bg-gray-100  focus:ring-gray-300;
-}
-
-button[elegant] {
-  @apply bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-200;
-}
-
-/* utils, like bold etc */
-button[bold] {
-  @apply font-bold;
-}
-
-[disabled] {
-  @apply opacity-50 cursor-not-allowed;
-}
-
-/* sizes */
-button[sm] {
-  @apply px-2 py-2 text-xs;
-}
-
-button[lg] {
-  @apply px-4 py-4 text-lg;
-}
-
-details summary {
-  @apply p-2 bg-gray-100 overflow-hidden rounded-md text-sm hover:bg-gray-200 transition-colors duration-200 ease-in-out focus:ring-gray-300 max-w-[fit-content] cursor-pointer list-none;
-  list-style-type: none;
-}
-
-details[open] > summary {
-  @apply list-none;
-}
-
-details > ul {
-  @apply p-2 shadow z-[1] rounded-md w-52 space-y-2  bg-white absolute;
-}
-
-/* List item */
-details > ul > li {
-  @apply p-2 rounded-md text-sm hover:bg-gray-100 cursor-pointer transition-colors duration-200 ease-in-out focus:ring-gray-300;
-}
-
-/* Disabled */
-details > ul > li[disabled] {
-  @apply opacity-50 cursor-not-allowed;
-}
-
-details > ul > li[disabled]:hover {
-  @apply bg-white;
-}
-
-/* Sizes */
-details > [sm] {
-  @apply px-2 py-1;
-}
-
-details > [lg] {
-  @apply px-4 py-2;
+nav[navbar] .list .item {
+  @apply px-1 py-2 text-gray-600 hover:text-gray-700 transition-colors duration-150 ease-in-out;
 }
 
 /* for text,password,email,number */
@@ -204,16 +144,40 @@ input[invalid="false"] {
   }
 }
 
-nav[navbar] {
-  @apply flex items-center justify-between px-4 py-3 bg-white border-b border-gray-200;
+button {
+  @apply bg-gray-100 px-3 py-3 rounded-md text-sm hover:bg-gray-200 transition-colors duration-200 ease-in-out focus:ring-gray-300;
 }
 
-nav[navbar] .list {
-  @apply flex;
+/* attribute */
+button[hasRing] {
+  @apply focus:ring-2 focus:border-none transition-all ease-in-out duration-200;
 }
 
-nav[navbar] .list .item {
-  @apply px-1 py-2 text-gray-600 hover:text-gray-700 transition-colors duration-150 ease-in-out;
+/* varians */
+button[outline] {
+  @apply bg-transparent border-2 border-gray-200 text-gray-900 hover:bg-gray-100  focus:ring-gray-300;
+}
+
+button[elegant] {
+  @apply bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-200;
+}
+
+/* utils, like bold etc */
+button[bold] {
+  @apply font-bold;
+}
+
+[disabled] {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* sizes */
+button[sm] {
+  @apply px-2 py-2 text-xs;
+}
+
+button[lg] {
+  @apply px-4 py-4 text-lg;
 }
 
 :root {
@@ -225,5 +189,40 @@ nav[navbar] .list .item {
   /* colors */
   --green-primary: rgb(34, 197, 94);
   --red-primary: rgb(239, 68, 68);
+}
+
+details summary {
+  @apply p-2 bg-gray-100 overflow-hidden rounded-md text-sm hover:bg-gray-200 transition-colors duration-200 ease-in-out focus:ring-gray-300 max-w-[fit-content] cursor-pointer list-none;
+}
+
+details[open] > summary {
+  @apply list-none;
+}
+
+details > ul {
+  @apply p-2 shadow z-[1] rounded-md w-52 space-y-2  bg-white absolute;
+}
+
+/* List item */
+details > ul > li {
+  @apply p-2 rounded-md text-sm hover:bg-gray-100 cursor-pointer transition-colors duration-200 ease-in-out focus:ring-gray-300;
+}
+
+/* Disabled */
+details > ul > li[disabled] {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+details > ul > li[disabled]:hover {
+  @apply bg-white;
+}
+
+/* Sizes */
+details > [sm] {
+  @apply px-2 py-1;
+}
+
+details > [lg] {
+  @apply px-4 py-2;
 }
 
