@@ -1,10 +1,1 @@
-[
-  "button",
-  "versions",
-  "dropdown",
-  "input",
-  "installation",
-  "libary-sizes",
-  "navigation-bar"
-]
-
+["button", "versions", "dropdown", "input", "installation", "libary-sizes", "navigation-bar", "alert"]

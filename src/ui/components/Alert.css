@@ -18,7 +18,7 @@
 /* Other */
 /* success  */
 .alert[success] {
-  @apply bg-green-200;
+  @apply bg-emerald-200;
 }
 
 .alert[success] p,
@@ -30,39 +30,39 @@
 .alert[success] h4,
 .alert[success] h5,
 .alert[success] h6 {
-  @apply text-gray-600;
+  @apply text-emerald-700;
 }
 
 /* warning */
-.alert[warning] {
+.alert[warn] {
   @apply bg-yellow-200;
 }
 
-.alert[warning] p,
-.alert[warning] ul,
-.alert[warning] b,
-.alert[warning] h1,
-.alert[warning] h2,
-.alert[warning] h3,
-.alert[warning] h4,
-.alert[warning] h5,
-.alert[warning] h6 {
+.alert[warn] p,
+.alert[warn] ul,
+.alert[warn] b,
+.alert[warn] h1,
+.alert[warn] h2,
+.alert[warn] h3,
+.alert[warn] h4,
+.alert[warn] h5,
+.alert[warn] h6 {
   @apply text-yellow-700;
 }
 
 /* danger */
-.alert[danger] {
+.alert[error] {
   @apply bg-red-200;
 }
 
-.alert[danger] p,
-.alert[danger] ul,
-.alert[danger] b,
-.alert[danger] h1,
-.alert[danger] h2,
-.alert[danger] h3,
-.alert[danger] h4,
-.alert[danger] h5,
-.alert[danger] h6 {
+.alert[error] p,
+.alert[error] ul,
+.alert[error] b,
+.alert[error] h1,
+.alert[error] h2,
+.alert[error] h3,
+.alert[error] h4,
+.alert[error] h5,
+.alert[error] h6 {
   @apply text-red-700;
 }

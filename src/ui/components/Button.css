@@ -9,11 +9,23 @@ button[hasRing] {
 
 /* varians */
 button[outline] {
-  @apply bg-transparent border-2 border-gray-200 text-gray-900 hover:bg-gray-100  focus:ring-gray-300;
+  @apply bg-transparent border-[1.5px] border-gray-200 text-gray-900 hover:bg-gray-100  focus:ring-gray-300;
 }
 
 button[elegant] {
   @apply bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-200;
+}
+
+button[success] {
+  @apply bg-emerald-500 text-white hover:bg-emerald-600 focus:ring-emerald-200;
+}
+
+button[error] {
+  @apply bg-red-500 text-white hover:bg-red-600 focus:ring-red-200;
+}
+
+button[warn] {
+  @apply bg-yellow-500 text-white hover:bg-yellow-600 focus:ring-yellow-200;
 }
 
 /* utils, like bold etc */
@@ -28,6 +40,10 @@ button[bold] {
 /* sizes */
 button[sm] {
   @apply px-2 py-2 text-xs;
+}
+
+button[md] {
+  @apply px-3 py-3 text-sm;
 }
 
 button[lg] {
