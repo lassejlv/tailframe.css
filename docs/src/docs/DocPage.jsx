@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from '../components/Sidebar'; // Import Sidebar component
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 
 export default function DocPage() {
   // get the route path /docs/:id
@@ -41,11 +42,11 @@ export default function DocPage() {
           </>
         ) : (
           <>
-            <div className="alert">
-              <p>Heads up! Tailframe is still in development. Some components may not work as expected.</p>
+            <div className="alert" warn="true">
+              <p>This is a work in progress. Stable version will be aviaible in start october.</p>
             </div>
             <div className="prose">
-              <ReactMarkdown children={markdown} />
+              <ReactMarkdown children={markdown} rehypePlugins={[rehypeRaw]} />
             </div>
           </>
         )}

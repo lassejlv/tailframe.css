@@ -1,12 +1,8 @@
-import React from "react";
-import { config } from "../config";
+import { config } from '../config';
 
 export default function Navbar() {
   return (
-    <nav
-      className="!flex-col md:!flex-row !space-y-3 md:space-y-0"
-      navbar="true"
-    >
+    <nav className="!flex-col md:!flex-row !space-y-3 md:space-y-0" navbar="true">
       <h1 className="text-2xl mt-3 md:mt-0">Tailframe CSS</h1>
 
       <ul className="list">
@@ -18,7 +14,7 @@ export default function Navbar() {
             <ul>
               <li>
                 <a href="/docs">
-                  {" "}
+                  {' '}
                   <i className="fa-solid fa-angle-right"></i> Latest (v0.0.1)
                 </a>
               </li>
@@ -31,10 +27,7 @@ export default function Navbar() {
             </ul>
           </details>
         </li>
-        <li
-          className="item"
-          onClick={() => (window.location.href = "/docs/search")}
-        >
+        <li className="item" onClick={() => (window.location.href = '/docs/search')}>
           <button md="true" bold="true" hasring="true">
             <i className="fas fa-search mr-2"></i>
             Search
@@ -46,13 +39,7 @@ export default function Navbar() {
           </button>
         </li>
         <li className="item">
-          <button
-            md="true"
-            bold="true"
-            hasring="true"
-            elegant="true"
-            onClick={() => window.location.replace(config.github_repo)}
-          >
+          <button md="true" bold="true" hasring="true" elegant="true" onClick={() => window.location.replace(config.github_repo)}>
             <i className="fab fa-github mr-2"></i>View on github
           </button>
         </li>
