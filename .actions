@@ -1,0 +1,2 @@
+compile = go run main.go
+tailwind = bunx tailwindcss -i ./dist/tailframe.build.css -o ./dist/build.css -m

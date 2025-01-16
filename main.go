@@ -46,8 +46,7 @@ func main() {
 		panic(err)
 	}
 
-
-	var cmdString string = "bun run tailwindcss"
+	var cmdString string = "action tailwind"
 
 	cmd := exec.Command("bash", "-c", cmdString)
 	err = cmd.Run()
