@@ -9,7 +9,9 @@ Later this year. I'm currently working on the documentation and the website and 
 ## How to run?
 
 Download the latest version of go on your system (https://go.dev)
+
 Download the latest version of bun.js on your system (https://bun.sh)
+
 Download the actionfile command runner (https://github.com/lassejlv/action)
 
 Then simply run
