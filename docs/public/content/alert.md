@@ -7,3 +7,8 @@ keywords: ['tailframe', 'tailframe css', 'tailframe css alert', 'tailframe butto
 ---
 
 # Alert Component
+
+<div class="alert alert-info">
+  <div class="alert-title">Info</div>
+  <div class="alert-content">This is an info alert</div>
+</div>

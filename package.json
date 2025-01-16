@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "bun run src/watch.ts",
-    "tailwindcss": "tailwindcss -i ./src/dist/ui.css -o ./src/dist/build.css -m"
+    "tailwindcss": "tailwindcss -i ./dist/tailframe.build.css -o ./dist/build.css -m"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

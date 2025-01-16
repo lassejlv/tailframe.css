@@ -1,0 +1,230 @@
+/* Default Variant */
+.alert {
+  @apply bg-blue-200 text-blue-400 p-3 rounded-md bg-opacity-10 mt-5 mb-2 max-w-2xl;
+}
+
+.alert p,
+.alert ul,
+.alert b,
+.alert h1,
+.alert h2,
+.alert h3,
+.alert h4,
+.alert h5,
+.alert h6 {
+  @apply text-blue-400 text-sm text-center md:text-left;
+}
+
+/* Other */
+/* success  */
+.alert[success] {
+  @apply bg-emerald-200;
+}
+
+.alert[success] p,
+.alert[success] ul,
+.alert[success] b,
+.alert[success] h1,
+.alert[success] h2,
+.alert[success] h3,
+.alert[success] h4,
+.alert[success] h5,
+.alert[success] h6 {
+  @apply text-emerald-700;
+}
+
+/* warning */
+.alert[warn] {
+  @apply bg-yellow-200;
+}
+
+.alert[warn] p,
+.alert[warn] ul,
+.alert[warn] b,
+.alert[warn] h1,
+.alert[warn] h2,
+.alert[warn] h3,
+.alert[warn] h4,
+.alert[warn] h5,
+.alert[warn] h6 {
+  @apply text-yellow-700;
+}
+
+/* danger */
+.alert[error] {
+  @apply bg-red-200;
+}
+
+.alert[error] p,
+.alert[error] ul,
+.alert[error] b,
+.alert[error] h1,
+.alert[error] h2,
+.alert[error] h3,
+.alert[error] h4,
+.alert[error] h5,
+.alert[error] h6 {
+  @apply text-red-700;
+}
+button {
+  @apply bg-gray-100 px-3 py-3 rounded-md text-sm hover:bg-gray-200 transition-colors duration-200 ease-in-out focus:ring-gray-300;
+}
+
+/* attribute */
+button[hasRing] {
+  @apply focus:ring-2 focus:border-none transition-all ease-in-out duration-200;
+}
+
+/* varians */
+button[outline] {
+  @apply bg-transparent border-[1.5px] border-gray-200 text-gray-900 hover:bg-gray-100  focus:ring-gray-300;
+}
+
+button[elegant] {
+  @apply bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-200;
+}
+
+button[success] {
+  @apply bg-emerald-500 text-white hover:bg-emerald-600 focus:ring-emerald-200;
+}
+
+button[error] {
+  @apply bg-red-500 text-white hover:bg-red-600 focus:ring-red-200;
+}
+
+button[warn] {
+  @apply bg-yellow-500 text-white hover:bg-yellow-600 focus:ring-yellow-200;
+}
+
+/* utils, like bold etc */
+button[bold] {
+  @apply font-bold;
+}
+
+[disabled] {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* sizes */
+button[sm] {
+  @apply px-2 py-2 text-xs;
+}
+
+button[md] {
+  @apply px-3 py-3 text-sm;
+}
+
+button[lg] {
+  @apply px-4 py-4 text-lg;
+}
+details summary {
+  @apply p-2 bg-gray-100 overflow-hidden rounded-md text-sm hover:bg-gray-200 transition-colors duration-200 ease-in-out focus:ring-gray-300 max-w-[fit-content] cursor-pointer list-none;
+}
+
+details[open] > summary {
+  @apply list-none;
+}
+
+details > ul {
+  @apply p-2 shadow z-[1] rounded-md w-52 space-y-2  bg-white absolute;
+}
+
+/* List item */
+details > ul > li {
+  @apply p-2 rounded-md text-sm hover:bg-gray-100 cursor-pointer transition-colors duration-200 ease-in-out focus:ring-gray-300;
+}
+
+/* Disabled */
+details > ul > li[disabled] {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+details > ul > li[disabled]:hover {
+  @apply bg-white;
+}
+
+/* Sizes */
+details > [sm] {
+  @apply px-2 py-1;
+}
+
+details > [lg] {
+  @apply px-4 py-2;
+}
+/* for text,password,email,number */
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'] {
+  @apply outline-none border border-gray-200 rounded-md p-3 text-sm focus:ring-2 focus:ring-gray-300 transition-all duration-200 ease-in-out;
+}
+
+/* Full size */
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'][full] {
+  @apply w-full;
+}
+
+/* Medium Size */
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'][md] {
+  @apply w-1/2;
+}
+
+/* Invalid */
+input[invalid='true'] {
+  @apply border-red-500 focus:ring-red-200;
+  background-image: var(--form-invalid);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 25px;
+  animation: sideToSideInverse 0.3s ease-in-out;
+}
+
+/* Valid */
+input[invalid='false'] {
+  @apply border-green-500 focus:ring-green-200;
+  background-image: var(--form-valid);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 25px;
+  animation: sideToSideInverse 0.3s ease-in-out;
+}
+
+@keyframes sideToSideInverse {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(1%);
+  }
+
+  100% {
+    transform: translateX(-1%);
+  }
+}
+nav[navbar] {
+  @apply flex items-center justify-between px-4 py-3 bg-white border-b border-gray-200;
+}
+
+nav[navbar] .list {
+  @apply flex;
+}
+
+nav[navbar] .list .item {
+  @apply px-1 py-2 text-gray-600 hover:text-gray-700 transition-colors duration-150 ease-in-out;
+}
+:root {
+  /* icons */
+  --form-invalid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(239, 68, 68)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");
+  --form-valid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(34, 197, 94)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  --hamburger-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(107, 114, 128)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='3' y1='12' x2='21' y2='12'%3E%3C/line%3E%3Cline x1='3' y1='6' x2='21' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='18' x2='21' y2='18'%3E%3C/line%3E%3C/svg%3E");
+  --details-marker: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='rgb(107, 114, 128)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'%3E%3C/path%3E%3C/svg%3E");
+  /* colors */
+  --green-primary: rgb(34, 197, 94);
+  --red-primary: rgb(239, 68, 68);
+}
