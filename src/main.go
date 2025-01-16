@@ -5,7 +5,6 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
-	"runtime"
 	"time"
 )
 
@@ -47,20 +46,15 @@ func main() {
 		panic(err)
 	}
 
-	// Run "bun run tailwindcss"
-	var cmd *exec.Cmd
+
 	var cmdString string = "bun run tailwindcss"
 
-	if runtime.GOOS == "windows" {
-		cmd = exec.Command("cmd", "/C", cmdString)
-	} else {
-		cmd = exec.Command("sh", "-c", cmdString)
-	}
-
+	cmd := exec.Command("bash", "-c", cmdString)
 	err = cmd.Run()
 
 	if err != nil {
-		panic(err)
+		fmt.Println(err)
+		os.Exit(1)
 	}
 
 	fmt.Println("Done in", time.Since(start).Milliseconds(), "ms")
