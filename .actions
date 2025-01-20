@@ -1,2 +1,3 @@
 compile = go run main.go
+watch = go run main.go watch
 tailwind = bunx tailwindcss -i ./dist/tailframe.build.css -o ./dist/build.css -m

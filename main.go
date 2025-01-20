@@ -6,9 +6,66 @@ import (
 	"os/exec"
 	"path/filepath"
 	"time"
+
+	"github.com/fsnotify/fsnotify"
 )
 
 func main() {
+	isWatchMode := len(os.Args) > 1 && os.Args[1] == "watch"
+
+	if isWatchMode {
+		fmt.Println("Watching for changes...")
+		compile()
+		watch()
+	} else {
+		compile()
+	}
+}
+
+func watch() {
+	watcher, err := fsnotify.NewWatcher()
+	if err != nil {
+		fmt.Println("Error creating watcher:", err)
+		return
+	}
+	defer watcher.Close()
+
+	// Create a channel to receive events
+	done := make(chan bool)
+
+	// Start watching in a goroutine
+	go func() {
+		for {
+			select {
+			case event, ok := <-watcher.Events:
+				if !ok {
+					return
+				}
+				if event.Op&fsnotify.Write == fsnotify.Write {
+					fmt.Println("Modified file:", event.Name)
+					compile()
+				}
+			case err, ok := <-watcher.Errors:
+				if !ok {
+					return
+				}
+				fmt.Println("Error:", err)
+			}
+		}
+	}()
+
+	// Add directory to watch
+	err = watcher.Add("./ui/components")
+	if err != nil {
+		fmt.Println("Error adding watch:", err)
+		return
+	}
+
+	<-done // Block forever
+}
+
+func compile() {
+	// Your existing compile function remains the same
 	start := time.Now()
 	fmt.Println("Compiling components...")
 

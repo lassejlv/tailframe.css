@@ -1,6 +1,6 @@
 /* Default Variant */
 .alert {
-  @apply bg-blue-200 text-blue-400 p-3 rounded-md bg-opacity-10 mt-5 mb-2 max-w-2xl;
+    @apply bg-blue-200 text-blue-400 p-3 rounded-md bg-opacity-10 mt-5 mb-2 max-w-2xl;
 }
 
 .alert p,
@@ -12,13 +12,13 @@
 .alert h4,
 .alert h5,
 .alert h6 {
-  @apply text-blue-400 text-sm text-center md:text-left;
+    @apply text-blue-400 text-sm text-center md:text-left;
 }
 
 /* Other */
 /* success  */
 .alert[success] {
-  @apply bg-emerald-200;
+    @apply bg-emerald-200;
 }
 
 .alert[success] p,
@@ -30,12 +30,12 @@
 .alert[success] h4,
 .alert[success] h5,
 .alert[success] h6 {
-  @apply text-emerald-700;
+    @apply text-emerald-700;
 }
 
 /* warning */
 .alert[warn] {
-  @apply bg-yellow-200;
+    @apply bg-yellow-200;
 }
 
 .alert[warn] p,
@@ -47,12 +47,12 @@
 .alert[warn] h4,
 .alert[warn] h5,
 .alert[warn] h6 {
-  @apply text-yellow-700;
+    @apply text-yellow-700;
 }
 
 /* danger */
 .alert[error] {
-  @apply bg-red-200;
+    @apply bg-red-200;
 }
 
 .alert[error] p,
@@ -64,5 +64,5 @@
 .alert[error] h4,
 .alert[error] h5,
 .alert[error] h6 {
-  @apply text-red-700;
+    @apply text-red-700;
 }
